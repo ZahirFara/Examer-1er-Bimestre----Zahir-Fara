@@ -17,43 +17,43 @@ public class Vtv : MonoBehaviour
 
         if (patente == "")
         {
-            Debug.LogError("Error: La patente no puede estar vacía.");
-            Debug.LogError("VTV no aprobada");
+            Debug.Log("Error: La patente no puede estar vacía.");
+            Debug.Log("VTV no aprobada");
             return;
         }
 
         if (modelo < 1900 || modelo > añoActual)
         {
-            Debug.LogError("Error: El modelo debe ser mayor a 1900 y menor o igual al año actual.");
-            Debug.LogError("VTV no aprobada");
+            Debug.Log("Error: El modelo debe ser mayor a 1900 y menor o igual al año actual.");
+            Debug.Log("VTV no aprobada");
             return;
         }
 
         if (kilometrosRecorridos < 0)
         {
-            Debug.LogError("Error: Los kilómetros recorridos no pueden ser negativos.");
-            Debug.LogError("VTV no aprobada");
+            Debug.Log("Error: Los kilómetros recorridos no pueden ser negativos.");
+            Debug.Log("VTV no aprobada");
             return;
         }
 
         if (vencimientoVTV <= modelo || vencimientoVTV >= añoActual)
         {
-            Debug.LogError("Error: El vencimiento de la VTV debe ser mayor que el año de fabricación y menor que el año actual.");
-            Debug.LogError("VTV no aprobada");
+            Debug.Log("Error: El vencimiento de la VTV debe ser mayor que el año de fabricación y menor que el año actual.");
+            Debug.Log("VTV no aprobada");
             return;
         }
 
         if (hcPPM < 5)
         {
-            Debug.LogError("Error: Los HC no pueden ser menores que 5.");
-            Debug.LogError("VTV no aprobada");
+            Debug.Log("Error: Los HC no pueden ser menores que 5.");
+            Debug.Log("VTV no aprobada");
             return;
         }
 
         if (hcPPM > 100)
         {
-            Debug.LogError("Error: Los HC son demasiado altos. VTV desaprobada.");
-            Debug.LogError("VTV no aprobada");
+            Debug.Log("Error: Los HC son demasiado altos. VTV desaprobada.");
+            Debug.Log("VTV no aprobada");
             return;
         }
 
